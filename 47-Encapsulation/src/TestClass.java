@@ -5,8 +5,13 @@ public class TestClass {
 		// TODO Auto-generated method stub
 
 		Printer printer = new Printer(90, true);
-		printer.fillUpTonner(11);
+		printer.fillUpTonner(5);
 		printer.printing(true);
+		printer.printing(true);
+		printer.printing(false);
+		printer.printing(false);
+		
+		printer.howManyPages();
 	}
 
 }

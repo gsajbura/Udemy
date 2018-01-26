@@ -14,26 +14,26 @@ public class Printer {
 	}
 
 	public void fillUpTonner(int ammount) {
-		
-		if(tonerLevel + ammount <= 100) {
+
+		if (tonerLevel + ammount <= 100) {
 			tonerLevel += ammount;
 			System.out.println("Ammount is " + tonerLevel);
-			} else 
+		} else
 			System.out.println("Toner level cannto exeed 100. Current amount is: " + tonerLevel);
-		
+	}
 
-	}
-	
-	public void printing(boolean isDuplex) {
-		
-		if(this.isDuplex == isDuplex) {
+	public void printing(boolean isPrintingDuplex) {
+
+		if (this.isDuplex == false && isPrintingDuplex == true) {
+			System.out.println("Not printing, this is not duplex");
+		} else {
 			System.out.println("Printing");
-			this.pagesPrinted ++;
-		}else
-			System.out.println("Not printing");
-			
+			this.pagesPrinted++;
+		}
 	}
 	
-	
+	public void howManyPages() {
+		System.out.println("Printer has printed " + this.pagesPrinted + " so far...");
+	}
 
 }
