@@ -10,13 +10,13 @@ public class Chair {
 		this.armrests = armrests;
 	}
 
-	public int getLegs() {
-		return legs;
-	}
-
-	public int getArmrests() {
-		return armrests;
-	}
+//	public int getLegs() {
+//		return legs;
+//	}
+//
+//	public int getArmrests() {
+//		return armrests;
+//	}
 
 	public void printChair() {
 		System.out.println("Chair has: " + legs + " legs and " + armrests + " armrests");

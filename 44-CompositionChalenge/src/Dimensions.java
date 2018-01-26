@@ -11,17 +11,17 @@ public class Dimensions {
 		this.hight = hight;
 	}
 
-	public int getWidth() {
-		return width;
-	}
-
-	public int getLenght() {
-		return lenght;
-	}
-
-	public int getHight() {
-		return hight;
-	}
+//	public int getWidth() {
+//		return width;
+//	}
+//
+//	public int getLenght() {
+//		return lenght;
+//	}
+//
+//	public int getHight() {
+//		return hight;
+//	}
 	
 	public void printDimensions() {
 		System.out.println("Dimensions of table are: " + width + " " + lenght + " " + hight);

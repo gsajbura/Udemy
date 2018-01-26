@@ -11,8 +11,8 @@ public class Switch {
 	private void switchLamp () {
 		
 		if (isOn)
-			System.out.println("Lampa jest w³¹czona");
+			System.out.println("Lamp is ON");
 		else
-			System.out.println("Lampa jest wy³¹czona");
+			System.out.println("Lamp is OFF");
 	}
 }
