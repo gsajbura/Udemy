@@ -8,6 +8,7 @@ public class Car {
 			System.out.println("Car number #" + i + " is " + car.getName());
 			car.startEngine();
 			car.accelerate();
+			System.out.println(car.getWheels());
 			System.out.println();
 		}
 
@@ -28,14 +29,13 @@ public class Car {
 	}
 
 	private String name;
-	private int wheels;
+	private int wheels = 4;
 	private boolean engine;
 	private int cylinders;
 
 	public Car(String name, int cylinders) {
 		this.name = name;
 		this.cylinders = cylinders;
-		this.wheels = 4;
 		this.engine = true;
 	}
 
@@ -53,6 +53,10 @@ public class Car {
 
 	public int getCylinders() {
 		return cylinders;
+	}
+	
+	public int getWheels() {
+		return wheels;
 	}
 
 }
