@@ -25,7 +25,7 @@ public class Printer {
 	public void printing(boolean isPrintingDuplex) {
 
 		if (this.isDuplex == false && isPrintingDuplex == true) {
-			System.out.println("Not printing, this is not duplex");
+			System.out.println("Not printing, this printer is not duplex");
 		} else {
 			System.out.println("Printing");
 			this.pagesPrinted++;
