@@ -4,13 +4,13 @@ import java.util.Scanner;
 public class MobilePhone {
 
 	private Scanner scanner = new Scanner(System.in);
-	private static ArrayList<Contact> contacts = new ArrayList<Contact>();
+	private ArrayList<Contact> contacts = new ArrayList<Contact>();
 
 	public void useMobielPhone() {
 		boolean quit = false;
 		printOptionList();
 		while (!quit) {
-			System.out.print("\nChoose option: ");
+			System.out.print("\nChoose option (0 - Print option list): ");
 			int choice = scanner.nextInt();
 			scanner.nextLine();
 			switch (choice) {
@@ -47,7 +47,7 @@ public class MobilePhone {
 	}
 
 	private void printOptionList() {
-		System.out.println("Press number");
+		System.out.println("\nPress number");
 		System.out.println("\t0 - Print options");
 		System.out.println("\t1 - Print list of contacts");
 		System.out.println("\t2 - Add new contact");
