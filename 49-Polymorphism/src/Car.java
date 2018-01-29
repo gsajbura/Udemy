@@ -30,13 +30,11 @@ public class Car {
 
 	private String name;
 	private int wheels = 4;
-	private boolean engine;
 	private int cylinders;
 
 	public Car(String name, int cylinders) {
 		this.name = name;
 		this.cylinders = cylinders;
-		this.engine = true;
 	}
 
 	public void startEngine() {
