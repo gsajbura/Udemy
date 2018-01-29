@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class MobilePhone {
 
-	private static Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 	private static ArrayList<Contact> contacts = new ArrayList<Contact>();
 
 	public void useMobielPhone() {
@@ -43,18 +43,21 @@ public class MobilePhone {
 	}
 
 	private void addContact() {
+		Scanner input = new Scanner(System.in);
 		System.out.print("Type name: ");
-		String name = scanner.nextLine();
+		String name = input.nextLine();
 		System.out.print("Type number: ");
-		String number = scanner.nextLine();
-		System.out.println("");
+		String number = input.nextLine();
 		contacts.add(new Contact(name, number));
 		System.out.println("New contact added");
 	}
 
 	private void printContacts() {
+		System.out.println("List of contacts:");
+		int i = 1;
 		for (Contact x : contacts) {
-			System.out.println(x.getName() + " " + x.getNumber());
+			System.out.println(i + ". " + x.getName() + " " + x.getNumber());
+			i++;
 		}
 	}
 
