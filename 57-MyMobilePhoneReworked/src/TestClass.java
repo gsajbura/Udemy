@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class TestClass {
 	private static MobilePhone mobilePhone = new MobilePhone();
 	private static Scanner scanner = new Scanner(System.in);
-	
+
 	public static void main(String[] args) {
 		useMobielPhone();
 	}
-	
+
 	private static void useMobielPhone() {
 		boolean quit = false;
 		printOptionList();
@@ -47,7 +47,7 @@ public class TestClass {
 			}
 		}
 	}
-	
+
 	private static void printOptionList() {
 		System.out.println("\nPress number");
 		System.out.println("\t0 - Print options");
@@ -58,28 +58,28 @@ public class TestClass {
 		System.out.println("\t5 - Serch for contact");
 		System.out.println("\t9 - Quit");
 	}
-	
-	private static void phoneAddContact(){
+
+	private static void phoneAddContact() {
 		System.out.print("Type name: ");
 		String name = scanner.nextLine();
-		
-		if(mobilePhone.findContact(name)) {
+
+		if (mobilePhone.findContact(name)) {
 			System.out.println("Contact already on the list");
 			return;
 		}
-		
+
 		System.out.print("Type number: ");
 		String number = scanner.nextLine();
 		Contact newContact = new Contact(name, number);
 		mobilePhone.addContact(newContact);
 		System.out.println("New contact " + name + " added with number " + number);
-		
+
 	}
-	
+
 	private static void phoneModifyContact() {
 		System.out.print("Type name of a contact to modify: ");
 		String name = scanner.nextLine();
-		if(mobilePhone.findContact(name)) {
+		if (mobilePhone.findContact(name)) {
 			System.out.println("Contact " + name + " found");
 			System.out.print("Type new name: ");
 			String newName = scanner.nextLine();
@@ -90,13 +90,13 @@ public class TestClass {
 		} else {
 			System.out.println("Contact " + name + " not found");
 		}
-		
+
 	}
-	
-	private static void phoneRemoveContact(){
+
+	private static void phoneRemoveContact() {
 		System.out.print("Type name of a contact to remove: ");
 		String name = scanner.nextLine();
-		if(mobilePhone.findContact(name)) {
+		if (mobilePhone.findContact(name)) {
 			System.out.println("Contact " + name + " found");
 			System.out.print("Do you want to remove this contact? 1-YES, 0-NO: ");
 			int choice = scanner.nextInt();
@@ -116,16 +116,16 @@ public class TestClass {
 			System.out.println("Contact " + name + " not found");
 		}
 	}
-	
+
 	private static void phoneSearchForContact() {
 		System.out.print("Type name of a contact to search for: ");
 		String name = scanner.nextLine();
-		if(mobilePhone.findContact(name)) {
+		if (mobilePhone.findContact(name)) {
 			String number = mobilePhone.searchForContact(name);
 			System.out.println("Contact " + name + " found. Phone number: " + number);
-		}else {
+		} else {
 			System.out.println("Contact " + name + " not found");
 		}
 	}
-	
+
 }
