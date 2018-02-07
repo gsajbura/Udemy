@@ -9,6 +9,7 @@ import java.util.Scanner;
  * Created by dev on 16/09/15.
  */
 public class Demo {
+    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         LinkedList<String> placesToVisit = new LinkedList<String>();
         addInOrder(placesToVisit, "Sydney");
@@ -27,7 +28,7 @@ public class Demo {
     }
 
     private static void printList(LinkedList<String> linkedList) {
-        Iterator<String> i= linkedList.iterator();
+        Iterator<String> i = linkedList.iterator();
         while(i.hasNext()) {
             System.out.println("Now visiting " + i.next());
         }
@@ -39,6 +40,7 @@ public class Demo {
 
         while(stringListIterator.hasNext()) {
             int comparison = stringListIterator.next().compareTo(newCity);
+            System.out.println("Comparison is: " + comparison);
             if(comparison == 0) {
                 // equal, do not add
                 System.out.println(newCity + " is already included as a destination");
@@ -58,8 +60,7 @@ public class Demo {
         return true;
     }
 
-    private static void visit(LinkedList cities) {
-        Scanner scanner = new Scanner(System.in);
+    private static void visit(LinkedList<String> cities) {
         boolean quit = false;
         boolean goingForward = true;
         ListIterator<String> listIterator = cities.listIterator();
