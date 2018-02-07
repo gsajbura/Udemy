@@ -34,9 +34,7 @@ public class TestPlaylist {
 		
 		player.usePlayer();	
 	}
-	
 
-	
 //	private static void listAlbums() {
 //		for(Album album : player.getAlbums()) {
 //			System.out.println(album.getAlbumTitle());
